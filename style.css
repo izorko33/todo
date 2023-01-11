@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 768px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+p,
+h3 {
+  margin: 6.5px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+#title {
+  padding: 5px;
+}
+
+.created {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #595959;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#newTask {
+  font-size: 30px;
+}
+
+.myTasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#formContainer,
+#deleteBtn,
+#doneBtn {
+  display: none;
+}
+
+#formContainer {
+  margin: 20px;
+  /* animation: 0.5s ease 0s 1 normal forwards running slide-in; */
+}
+
+.titleContainer,
+.priorityContainer {
+  max-width: 50%;
+  float: left;
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.buttonsContainer {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonsContainer input {
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background: #ffffff;
+  border: 1px solid #0082cb;
+  padding: 10px 33px;
+}
+
+.buttonsContainer input:hover {
+  cursor: pointer;
+}
+
+#formContainer button {
+  background: #ffffff;
+  border: 1px solid #0082cb;
+  border-radius: 8px;
+}
+
+#formContainer .saveBtn {
+  background: #0082cb;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+#formContainer input {
+  border-radius: 8px;
+}
+#todo-list {
+  list-style-type: none;
+}
+
+#todo-list li {
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#todo-list li:hover {
+  box-shadow: 3px 2px 18px rgba(0, 0, 0, 0.24);
+}
+
+#todo-list li:hover #deleteBtn,
+#todo-list li:hover #doneBtn {
+  display: inline-block;
+}
+
+#todo-list li.low {
+  background-color: #f7f7f7;
+  border-left: 8px solid #24bb0c;
+}
+
+#todo-list li.medium {
+  background-color: #fcfbe4;
+  border-left: 8px solid #aaa218;
+}
+
+#todo-list li.high {
+  background-color: #ffeeee;
+  border-left: 8px solid #bb2b0c;
+}
+
+#todo-list li.done .title {
+  text-decoration: line-through;
+}
+
+#deleteBtn {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  color: #a81010;
+  font-size: 15px;
+}
+
+#doneBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 11px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #616161;
+  border-radius: 4px;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
