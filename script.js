@@ -6,7 +6,7 @@ const toDoItemsFromLocalStorage = JSON.parse(localStorage.getItem("toDoItems"));
 
 const todoItems = [];
 
-if (toDoItemsFromLocalStorage.length > 0) {
+if (toDoItemsFromLocalStorage && toDoItemsFromLocalStorage.length > 0) {
   todoItems.push(...toDoItemsFromLocalStorage);
 }
 
